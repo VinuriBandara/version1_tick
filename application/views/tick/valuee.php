@@ -3,57 +3,16 @@
 
   <head>
 
+    <?php $this-> load ->view ('tick/partials/header'); ?>
 
-  	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-   
-
-
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  
-    <link href="<?php echo base_url(); ?>css/tick.css" rel="stylesheet">
-
-        <title>Home Valuer</title>
+   <title>Home Valuer</title>
 
   </head>
 
   <body id="valuer-home">
 
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav_val">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Tick Value</a>
-     
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Schedule</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="about.html">Appointment</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Help">Valuations</a>
-            </li>
-              &nbsp;&nbsp;  &nbsp;&nbsp;
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html" id="log">Log Out</a>
-            </li>
-          </ul>
-        </div>
-      </div> 
-    </nav>   
+  <?php $this-> load ->view ('tick/partials/nav_bar'); ?>
 
   <!-- Header -->
 
@@ -86,5 +45,8 @@
 
 
     </header>
+
+
+    <?php $this-> load ->view ('tick/partials/footer'); ?>
    </body>
    </html>

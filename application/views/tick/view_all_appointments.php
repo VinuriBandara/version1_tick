@@ -29,7 +29,7 @@
 
   <body id="page-top">
 
-<!-- <table>
+ <table>
   <?php foreach($appointment_list_finance as $value) { ?>
   <tr>
     <td><?php echo $value -> Email; ?></td>
@@ -52,9 +52,9 @@
 
 
 
-</table> -->
+</table> 
 
-echo "hellooooo";
+
 
 
 </body>

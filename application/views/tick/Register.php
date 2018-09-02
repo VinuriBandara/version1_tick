@@ -4,63 +4,30 @@
 
   <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-   
 
 
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <?php $this-> load ->view ('tick/partials/header'); ?>
 
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  
-    <link href="<?php echo base_url(); ?>css/tick.css" rel="stylesheet">
-
-
-
-        <title>Register</title>
+   <title>Register</title>
 
   </head>
 
   <body id="page-top">
-<nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Tick Value</a>
-     
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="whyTick.html">Why TickValue?</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="about.html">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Contact</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="appoint.html">Appointment</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Help">Help</a>
-            </li>
-              &nbsp;&nbsp;  &nbsp;&nbsp;
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html" id="log">Login</a>
-            </li>
-          
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#value" id="valuer">Valuer</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+
+    <?php foreach ($email as $username):
+
+  if ($username == '')
+   {
+    $this-> load ->view ('tick/partials/nav_bar'); 
+   }
+
+   else
+   {
+    $this-> load ->view ('tick/partials/nav_bar2',$username); 
+   }
+
+     endforeach; ?>
 
 
    <header class="masthead bg-success text-white text-center">
@@ -175,6 +142,8 @@
       </div>
     </section>
   
+
+  <?php $this-> load ->view ('tick/partials/footer'); ?>
 
 
 

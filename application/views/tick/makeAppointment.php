@@ -4,64 +4,32 @@
   <head>
 
   
-    <title>TickValue</title>
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+  <?php $this-> load ->view ('tick/partials/header'); ?>
+     
    
-
-
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  
-    <link href="<?php echo base_url(); ?>css/tick.css" rel="stylesheet">
-
 
 
   </head>
 
   <body id="page-top">
 
+
+    <?php foreach ($email as $username):
+
+  if ($username == '')
+   {
+    $this-> load ->view ('tick/partials/nav_bar'); 
+   }
+
+   else
+   {
+    $this-> load ->view ('tick/partials/nav_bar2',$username); 
+   }
+
+     endforeach; ?>
+
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Tick Value</a>
-     
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Why TickValue?</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="about.html">Contact</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Request">Appointment</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Help">Help</a>
-            </li>
-              &nbsp;&nbsp;  &nbsp;&nbsp;
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html" id="log">Login</a>
-            </li>
-          
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#value" id="valuer">Valuer</a>
-            </li>
-          </ul>
-        </div>
-      </div> 
-    </nav>   
+
 
   <!-- Header -->
 
@@ -209,13 +177,13 @@
               <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-xl" id="appoint" name="finance_appointment" value="Make Appointment">
                 <input type="reset" class="btn btn-primary btn-xl" value="Clear">
-                <button type="button" class="btn btn-primary btn-xl" id="cancel1" >Close</button>
+                <input type="button" class="btn btn-primary btn-xl" id="cancel1" value="Close" >
               </div>
  
 </form>
 
 
-<form id="form2" method="post">
+<form id="form2" method="post" >
   <hr class="star-light mb-5">
   <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -301,34 +269,23 @@
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              
-              
-              
+
               <br>
               <div id="success"></div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-xl" id="appoint" name="other_appointment">
                 <input type="reset" class="btn btn-primary btn-xl" id="">
-                <input type="button" class="btn btn-primary btn-xl" id="cancel2" >Close</button>
+                <input type="button" class="btn btn-primary btn-xl" id="cancel2" value="Close">
               </div>
- 
+
 </form>
+
+
+
+
+
 </div>
-
-    <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-
-  <!--  
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-   
-     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
- -->
-    <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url(); ?>js/freelancer.js"></script> 
-
+<?php $this-> load ->view ('tick/partials/footer'); ?>
 <script>
 $(document).ready(function(){
     $("#formButton").click(function(){

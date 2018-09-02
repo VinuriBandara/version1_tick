@@ -4,55 +4,14 @@
   <head>
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-   
-
-
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-
-    <link href="<?php echo base_url(); ?>css/tick.css" rel="stylesheet"> 
+    <?php $this-> load ->view ('tick/partials/header'); ?>
      <title>Login</title>
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/" >Tick Value</a>
-       
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url() ?>index.php/tick/">Why TickValue?</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" hhref="<?php echo base_url() ?>index.php/tick/">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url() ?>index.php/tick/">Contact</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url() ?>index.php/tick/">Appointment</a>
-            </li>
-             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url() ?>index.php/tick/">Help</a>
-            </li>
-          
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+<?php $this-> load ->view ('tick/partials/nav_bar'); ?>
 
 
 

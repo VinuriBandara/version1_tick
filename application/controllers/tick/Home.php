@@ -6,7 +6,11 @@ class Home extends CI_Controller {
 	function __construct() {
 parent::__construct();
 
-		$this-> load-> model('tick/tick_model');
+
+	$this->load->library('session');
+
+
+	$this-> load-> model('tick/tick_model');
 		
 
 // Load url helper
@@ -38,19 +42,20 @@ $this->load->helper('url');
 
 	}
 
-
 	public function login($mail,$pass)
 		{
 		//load session library
-		$this->load->library('session');
- 
-		
  
 		$data = $this->tick_model->login($mail, $pass);
  
 		if($data){
-			$this->session->set_userdata('user', $data);
-			header("location:".base_url()."index.php/tick/home/");
+
+			$var =$data['Email'];
+			$this-> session -> set_userdata('userEmail',$var);
+			$username= $this-> session ->userdata('userEmail');
+			 
+			header("location:".base_url()."index.php/tick/home/?username=$username");
+
 			}
 		else{
 			header("location:".base_url()."index.php/tick/home/view_login");
@@ -62,9 +67,26 @@ $this->load->helper('url');
 
 
 
+
+	public function logout()
+	{
+
+	$this->session->unset_userdata('Email');
+	$this->session->sess_destroy();
+	header("location:".base_url()."index.php/tick/home/");
+	}
+
+
+
 	function view_appoint()
 	{
-		$this->load->view('tick/makeAppointment');
+
+
+		$data['email'] =array(
+			$username=$this-> session ->userdata('userEmail')
+		);
+
+		$this->load->view('tick/makeAppointment',$data);
 
 		if($this -> input -> post('finance_appointment'))
 		{
@@ -86,6 +108,10 @@ $this->load->helper('url');
 	        );
 
 	  $this -> tick_model -> make_appointment_finance($data);
+	  header("location:".base_url()."index.php/tick/home/view_schedule");
+
+
+
       }
 
       if($this -> input -> post('other_appointment'))
@@ -105,15 +131,29 @@ $this->load->helper('url');
 	        );
 
 	  $this -> tick_model -> make_appointment_other($data);
+
+	   header("location:".base_url()."index.php/tick/home/view_schedule");
       }
 
 	}
 
 
+	function view_schedule()
+	{
+		$this -> load -> view('tick/schedule_page');
+	}
+
 
 	function register()
 	{
-		$this->load->view('tick/register');
+
+		$data['email'] =array(
+			$username=$this-> session ->userdata('userEmail')
+		);
+
+		
+
+		$this->load->view('tick/register',$data);
 
 		if($this -> input -> post('register'))
 		{
@@ -134,10 +174,6 @@ $this->load->helper('url');
 
 
 	    $this-> tick_model -> insert_user($data);
-
-	    $this-> session -> set_userdata($data);
-
-	    $username =$this-> session ->userdata('Email') ;
 
 
 	}
