@@ -13,20 +13,21 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Contact</a>
             </li>
              <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/view_appoint">Appointment</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/profile">Appointment</a>
             </li>
              <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Help">Help</a>
             </li>
               &nbsp;&nbsp;  &nbsp;&nbsp;
             <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/view_login" id="log">Login</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/view_login" id="log" >Login</a>
             </li>
           
             <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/valuer" id="valuer">Valuer</a>
+              <form action="<?php echo base_url()?>index.php/tick/home/register"><button type="submit" class="btn btn-primary py-3 px-0 px-lg-3" id="valuer">SignUp </button></form>
+              
             </li>
-          </ul>
+
         </div>
       </div>
     </nav>

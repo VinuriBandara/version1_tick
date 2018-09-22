@@ -1,7 +1,7 @@
 <html>
 <head runat="server">
     <title></title>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyAEynXiS9jou9sHpqTh0YPNWYLGQmuHXYM"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyCjgzHT7Xd2FjAv3ObRTqqAFZdPGMT2n_4"></script>
     <script type="text/javascript">
         function GetRoute() {
             var markers = new Array();
@@ -101,7 +101,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <input type="text" id="txtAddress" value="Kurunegala" style="width: 200px" />
+        <input type="text" id="txtAddress" value="" style="width: 200px" />
         <br />
         <input type="button" value="Get Route" onclick="GetRoute()" />
         <hr />

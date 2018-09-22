@@ -4,22 +4,24 @@
 
   <head>
 
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-   
+    <?php $this-> load ->view ('tick/partials/header'); ?>
+    <?php 
+    $data['email']= array($this -> input -> get('username'));
 
 
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  if ($this -> input -> get('username') == '')
+   {
+    $this-> load ->view ('tick/partials/nav_bar'); 
+   }
 
+   else
+   {
+    $this-> load ->view ('tick/partials/nav_bar2',$data); 
+   }
 
-    <link href="<?php echo base_url(); ?>css/tick.css" rel="stylesheet"> 
+    ?> 
+
 
 
 
@@ -28,34 +30,89 @@
   </head>
 
   <body id="page-top">
+<div class="container">
+ <div class="row bg-white has-shadow">
+            <div class="project-title align-items-right">
+          <div class="text">
+                <h3 class="h4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Upcoming Projects</h3><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Financial Companies</small>
+                  </div>
+                </div>
+             
+        </div>
 
- <table>
-  <?php foreach($appointment_list_finance as $value) { ?>
-  <tr>
-    <td><?php echo $value -> Email; ?></td>
-    <td><?php echo $value -> FirstName; ?></td>
-    <td><?php echo $value -> LastName; ?></td>
-    <td><?php echo $value -> Company_name; ?></td>
-    <td><?php echo $value -> Purpose; ?></td>
-    
-  </tr>
-<?php } ?>
+     <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Email Address</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Company</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <?php foreach($appointment_list_finance as $value) { ?>
+                <tr>
+                  <th scope="row"><?php echo $value -> Email; ?></th>
+                  <td><?php echo $value -> FirstName; ?></td>
+                  <td><?php echo $value -> LastName; ?></td>
+                  <td><?php echo $value -> Company_name; ?></td>
+                
+                  
+                </tr>
+              <?php } ?>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
 
-  <?php foreach($appointment_list_other as $value) { ?>
-  <tr>
-    <td><?php echo $value -> Email; ?></td>
-    <td><?php echo $value -> FirstName; ?></td>
-    <td><?php echo $value -> LastName; ?></td>
-    <td><?php echo $value -> Purpose; ?></td>
-  </tr>
-<?php } ?>
+<br><br>
+                    <div class="row bg-white has-shadow">
+            <div class="project-title align-items-right">
+          <div class="text">
+                <h3 class="h4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Upcoming Projects</h3><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</small>
+                  </div>
+                </div>
+             
+        </div>
+
+     <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Email Address</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                             
+                            </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                              <?php foreach($appointment_list_other as $value) { ?>
+               
+                  <th scope="row"><?php echo $value -> Email; ?></th>
+                  <td><?php echo $value -> FirstName; ?></td>
+                  <td><?php echo $value -> LastName; ?></td>
+           
+              
+                  
+                </tr>
+              <?php } ?>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
 
 
 
-</table> 
+</div>
 
 
-
-
+    <?php $this-> load ->view ('tick/partials/footer'); ?>
 </body>
 </html>

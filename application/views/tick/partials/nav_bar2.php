@@ -18,29 +18,31 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Contact</a>
             </li>
              <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/view_appoint?username=<?php echo $username?>">Appointment</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/profile">Appointment</a>
             </li>
              <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Help">Help</a>
             </li>
               &nbsp;&nbsp;  &nbsp;&nbsp;
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/logout" id="log">Logout</a>
-            </li>
-          
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/valuer" id="valuer">Valuer</a>
-            </li>
-
-
-            <li class="nav-item mx-0 mx-lg-1" >
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" > 
+                <li class="nav-item mx-0 mx-lg-1" >
+              <p class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger username" >
                 <?php  
                 foreach ($email as $username):
 
                         echo $username;
-                   endforeach; ?></a>
+                   endforeach; 
+               
+
+                   ?></p>
+
+
             </li>
+            <li class="nav-item mx-0 mx-lg-1" >
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url()?>index.php/tick/home/logout" id="log">Logout</a>
+            </li>
+        
+
+          
           </ul>
         </div>
       </div>

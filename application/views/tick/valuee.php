@@ -11,40 +11,62 @@
 
   <body id="valuer-home">
 
-    <!-- Navigation -->
-  <?php $this-> load ->view ('tick/partials/nav_bar'); ?>
 
-  <!-- Header -->
+<?php 
+    $data['email']= array($this -> input -> get('username'));
+
+
+
+  if ($this -> input -> get('username') == '')
+   {
+    $this-> load ->view ('tick/partials/nav_bar'); 
+   }
+
+   else
+   {
+    $this-> load ->view ('tick/partials/nav_bar2',$data); 
+   }
+
+    ?> 
 
 
     <!-- Header -->
-    <header class="head4 masthead text-white text-center">
+<!--     <header class="head4 masthead text-white text-center">
       <div id="seeAppointments" class="col-sm-4 col-md-4 col-lg-4">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/" alt="logo">
-        <hr class="star-light">
-        <form method="post" action="<?php echo base_url();?>index.php/tick/home/valuer_accept">
-           <input type="submit" id="formButton1" name="accept" value="Appointment" >
-         </form>
-      </div>
+        <hr class="star-light"> -->
 
-      <div id="seeSchedule" class="col-sm-4 col-md-4 col-lg-4">
+<!--       </div> -->
+
+   <!--    <div id="seeSchedule" class="col-sm-4 col-md-4 col-lg-4">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/" alt="logo">
-        <hr class="star-light">
-          <form method="post" action="<?php echo base_url();?>index.php/tick/home/appointments">
-           <input type="submit" id="formButton1" name="accept" value="All appointments" >
-         </form>
-      </div>
+        <hr class="star-light"> -->
+     
+         <div class="card-group">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
+                <p class="card-text"><a id="valuer_link" href="<?php echo base_url();?>index.php/tick/home/appointments">All Appointments</a></p>
+              </div>
+            </div>
+            <div class="card bg-warning">
+              <div class="card-body text-center">
+                <p class="card-text"><a id="valuer_link" href="<?php echo base_url();?>index.php/tick/home/valuer_accept">Schedule</a></p>
+              </div>
+            </div>
+            <div class="card bg-success">
+              <div class="card-body text-center">
+                <p class="card-text">Ongoing Projects</p>
+              </div>
+            </div>
+            <div class="card bg-danger">
+              <div class="card-body text-center">
+                <p class="card-text">Completed Projects</p>
+              </div>
+            </div>
+          </div>
+<!--       </div> 
 
-      <div id="seeValuations" class="col-sm-4 col-md-4 col-lg-4">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/" alt="logo">
-        <hr class="star-light">
-            <a href="#contain"><button type="button" id="formButton2">Valuations</button></a>
-      </div>
-
-    
-
-
-    </header>
+    </header> -->
 
 
     <?php $this-> load ->view ('tick/partials/footer'); ?>

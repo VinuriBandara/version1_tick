@@ -4,7 +4,7 @@
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Location</h4>
             <p class="lead mb-0">R.M.Rathnayake
-              <br>Kurungela,Sri Lanka</p>
+              <br>Kurunegala,Sri Lanka</p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
@@ -39,7 +39,7 @@
           <div class="col-md-4">
             <h4 class="text-uppercase mb-4">About TickValue</h4>
             <p class="lead mb-0">
-             chsdbfhbafhbashfhsafhabsfhjabshjb</p>
+             SriLanka s' First Land Valuation System</p>
           </div>
         </div>
       </div>

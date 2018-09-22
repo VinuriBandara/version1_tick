@@ -12,8 +12,20 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
-   <?php $this-> load ->view ('tick/partials/nav_bar'); ?>
+
+    <?php foreach ($email as $username):
+
+  if ($username == '')
+   {
+    $this-> load ->view ('tick/partials/nav_bar'); 
+   }
+
+   else
+   {
+    $this-> load ->view ('tick/partials/nav_bar2',$username); 
+   }
+
+     endforeach; ?>
 
   <!-- Header -->
     <header class="head2 masthead text-white text-center">
@@ -75,7 +87,7 @@
               <br><br><br>
               Have you had enough of calling your valuer, and not have hime picking up? Make an appointment in a minute and the valuer will reply to you within few minutes.
             </p>
-            <form action="Register.html" name="buttSec"><button type="submit" class="btn btn-primary btn-xl" id="appoint">Make an appointment</button></form>
+            <form action="<?php echo base_url()?>index.php/tick/home/profile"" name="buttSec"><button type="submit" class="btn btn-primary btn-xl" id="appoint">Make an appointment</button></form>
           </div>
 
 
